@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const noBtn = document.getElementById("noBtn");
+    // const noBtn = document.getElementById("noBtn");
 
 
-    // Event listener for "No" button click (sad GIF appears)
-    noBtn.addEventListener("click", function () {
-        // Update the page with a sad GIF
-        document.body.innerHTML = `
-            <div class="container">
-                <h1>huhubells</h1>
-                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExem5seG5vZnA4ODV4ZWxoaDk2eGR0NzNjd3FpMTlxYWxxYXM1YXRhMjBnd3p0YzVyaHE2YzNhZG9rY3NmYl90cWhjaDlqZTpwczg1cXM4NTVqa3FzaC9vTQ/giphy.gif" alt="Sad" class="sad-gif">
-            </div>
-        `;
-    });
+    // // Event listener for "No" button click (sad GIF appears)
+    // noBtn.addEventListener("click", function () {
+    //     // Update the page with a sad GIF
+    //     document.body.innerHTML = `
+    //         <div class="container">
+    //             <h1>huhubells</h1>
+    //             <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExem5seG5vZnA4ODV4ZWxoaDk2eGR0NzNjd3FpMTlxYWxxYXM1YXRhMjBnd3p0YzVyaHE2YzNhZG9rY3NmYl90cWhjaDlqZTpwczg1cXM4NTVqa3FzaC9vTQ/giphy.gif" alt="Sad" class="sad-gif">
+    //         </div>
+    //     `;
+    // });
 
     // Event listener for "No" button hover (runs away effect)
     noBtn.addEventListener("mouseover", function () {
