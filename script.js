@@ -13,6 +13,49 @@ document.addEventListener("DOMContentLoaded", function () {
     //     `;
     // });
 
+    document.addEventListener("DOMContentLoaded", function () {
+    const noBtn = document.getElementById("noBtn");
+
+    // Check if the device is mobile
+    function isMobile() {
+        return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    }
+
+    // "No" button hover effect (desktop) / touch effect (mobile)
+    function moveNoButton() {
+        let padding = 50; // Safe padding from edges
+
+        let maxX = window.innerWidth - noBtn.offsetWidth - padding;
+        let maxY = window.innerHeight - noBtn.offsetHeight - padding;
+
+        let minX = padding;
+        let minY = padding;
+
+        let currentX = noBtn.offsetLeft;
+        let currentY = noBtn.offsetTop;
+
+        let newX, newY;
+
+        do {
+            newX = Math.random() * (maxX - minX) + minX;
+            newY = Math.random() * (maxY - minY) + minY;
+        } while (Math.abs(newX - currentX) < 100 && Math.abs(newY - currentY) < 100);
+
+        noBtn.style.transition = "all 0.3s ease-in-out";
+        noBtn.style.position = "absolute";
+        noBtn.style.left = `${newX}px`;
+        noBtn.style.top = `${newY}px`;
+    }
+
+    // Apply movement logic based on the device type
+    if (isMobile()) {
+        noBtn.addEventListener("touchstart", moveNoButton); // Mobile touch effect
+    } else {
+        noBtn.addEventListener("mouseover", moveNoButton); // Desktop hover effect
+    }
+});
+
+
     // Event listener for "No" button hover (runs away effect)
     noBtn.addEventListener("mouseover", function () {
         let padding = 50; // Safe padding from edges
