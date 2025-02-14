@@ -56,30 +56,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-    // // Event listener for "No" button hover (runs away effect)
-    // noBtn.addEventListener("mouseover", function () {
-    //     let padding = 50; // Safe padding from edges
+    // Event listener for "No" button hover (runs away effect)
+    noBtn.addEventListener("mouseover", function () {
+        let padding = 50; // Safe padding from edges
 
-    //     let maxX = window.innerWidth - noBtn.offsetWidth - padding;
-    //     let maxY = window.innerHeight - noBtn.offsetHeight - padding;
+        let maxX = window.innerWidth - noBtn.offsetWidth - padding;
+        let maxY = window.innerHeight - noBtn.offsetHeight - padding;
 
-    //     let minX = padding;
-    //     let minY = padding;
+        let minX = padding;
+        let minY = padding;
 
-    //     let currentX = noBtn.offsetLeft;
-    //     let currentY = noBtn.offsetTop;
+        let currentX = noBtn.offsetLeft;
+        let currentY = noBtn.offsetTop;
 
-    //     let newX, newY;
+        let newX, newY;
 
-    //     do {
-    //         newX = Math.random() * (maxX - minX) + minX;
-    //         newY = Math.random() * (maxY - minY) + minY;
-    //     } while (Math.abs(newX - currentX) < 100 && Math.abs(newY - currentY) < 100); // Ensure enough distance from previous position
+        do {
+            newX = Math.random() * (maxX - minX) + minX;
+            newY = Math.random() * (maxY - minY) + minY;
+        } while (Math.abs(newX - currentX) < 100 && Math.abs(newY - currentY) < 100); // Ensure enough distance from previous position
 
-    //     noBtn.style.transition = "all 0.3s ease-in-out";
-    //     noBtn.style.left = `${newX}px`;
-    //     noBtn.style.top = `${newY}px`;
-    // });
+        noBtn.style.transition = "all 0.3s ease-in-out";
+        noBtn.style.left = `${newX}px`;
+        noBtn.style.top = `${newY}px`;
+    });
 
 
 
